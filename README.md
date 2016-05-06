@@ -6,14 +6,14 @@ $ npm install && npm i -g gulp nodemon
   
 ```
 
-now run
+now run Gulp
 ```bash
   
 $ gulp
   
 ```
 
-and in a second terminal run this. check out [port 3000](http://localhost:3000/)
+and in a second terminal run Nodemon. check out [port 3000](http://localhost:3000/)
 ```bash
   
 $ nodemon
