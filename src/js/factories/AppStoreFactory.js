@@ -24,7 +24,7 @@ var AppStoreFactory = function(){
 
   var matchCartItemID = function(id) {
     var itemID = '';
-    CART.filter(function(x) {
+    CART.forEach(function(x) {
       if (x.item._id == id) itemID = x.item._id;
     });
     return itemID;

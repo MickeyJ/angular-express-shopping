@@ -1,7 +1,7 @@
 var angular = require('angular');
 require('angular-ui-router');
 
-var checkMark = require('./filters/filters');
+var checkMark = require('./filters/CheckMarkFilter');
 var HomeController = require('./controllers/HomeController');
 var CartListController = require('./controllers/CartListController');
 var CartListDirective = require('./directives/CartListDirective');
