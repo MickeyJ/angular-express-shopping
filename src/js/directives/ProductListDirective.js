@@ -4,7 +4,6 @@ var ProductListDirective = function(){
     restrict: 'E',
     scope: {
       products: '=',
-      isInStock: '=',
       search: '=',
       selectedCategoryOption: '=',
       selectedPriceSort: '=',
