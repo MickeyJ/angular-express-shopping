@@ -4,34 +4,34 @@ var AppStoreFactory = function(){
   var PRODUCTS = require('../assets/products.json');
 
   var CART = [{
-      "item": PRODUCTS[0],
-      "qty": 1
+      item: PRODUCTS[0],
+      qty: 1
   }];
 
-  var removeItem = function(id){
+  function removeItem(id){
     CART.map(function(x, i){
       if(x.item._id === id){
         CART.splice(i, 1);
       }
     });
-  };
+  }
 
-  var addItem = function(item, qty){
+  function addItem(item, qty){
     CART.push({
       item: item,
       qty: qty
     })
-  };
+  }
 
-  var matchCartItemID = function(id) {
+  function matchCartItemID(id) {
     var itemID = '';
-    CART.forEach(function(x) {
+    CART.map(function(x) {
       if (x.item._id == id) itemID = x.item._id;
     });
     return itemID;
-  };
+  }
 
-  var editCartQty = function(action, qty, id){
+  function editCartItemQty(action, qty, id){
     CART.map(function(x){
       if(x.item._id === id){
         switch(action){
@@ -49,7 +49,7 @@ var AppStoreFactory = function(){
         }
       }
     });
-  };
+  }
   
   return{
     getAllProducts: function(){
@@ -63,7 +63,7 @@ var AppStoreFactory = function(){
       var productItemID = item._id;
       var cartItemID = matchCartItemID(productItemID);
       if(cartItemID === productItemID){
-        editCartQty('ADD_MORE', qty, productItemID);
+        editCartItemQty('ADD_MORE', qty, productItemID);
       } else {
         addItem(item, qty);
       }
@@ -72,10 +72,10 @@ var AppStoreFactory = function(){
       removeItem(id)
     },
     increaseQty: function(id){
-      editCartQty('INCREASE', null, id);
+      editCartItemQty('INCREASE', null, id);
     },
     decreaseQty: function(id){
-      editCartQty('DECREASE', null, id);
+      editCartItemQty('DECREASE', null, id);
     },
     cartTotal: function(){
       var total = 0;
