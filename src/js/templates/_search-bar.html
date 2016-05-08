@@ -1,0 +1,30 @@
+<div id="search-bar" class="form-inline">
+
+
+  <a class="btn btn-success" ui-sref="cart">
+    Checkout | Cart( {{cartQtyTotal ? cartQtyTotal : 'Empty'}} )
+  </a>
+  <input
+    type="text"
+    ng-model="searchName"
+    class="form-control"
+    placeholder="Search By Name"
+  />
+
+  <select
+    title="selectType"
+    class="form-control"
+    ng-init="selectedCategoryOption = categoryOptions[0].value"
+    ng-options="option.value as option.name for option in categoryOptions"
+    ng-model="selectedCategoryOption">
+  </select >
+
+  <select
+    title="selectPriceOrder"
+    class="form-control"
+    ng-init="selectedPriceOrder = priceSortOptions[0].value"
+    ng-options="option.value as option.name for option in priceSortOptions"
+    ng-model="selectedPriceOrder">
+  </select >
+
+</div>

@@ -20,6 +20,7 @@
     "gulp-browserify": "^0.5.1",
     "gulp-js-html-inject": "0.0.1",
     "gulp-ng-annotate": "^2.0.0",
+    "gulp-rename": "^1.2.2",
     "gulp-sass": "^2.3.1",
     "gulp-uglify": "^1.5.3",
     "ng-annotate": "^1.2.1",

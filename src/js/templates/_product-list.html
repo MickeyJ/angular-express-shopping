@@ -1,0 +1,55 @@
+<div id="product-list-box">
+  <section  ng-repeat="p in products | filter: searchName: p.name | filter: selectedCategoryOption | orderBy: selectedPriceOrder">
+    <article class="flex-row">
+
+      <div class="product-box col1-3">
+        <img class="img-circle" style="width: 100%" ng-src="{{p.imageUrl}}" alt="p.name" />
+      </div>
+
+      <div class="product-box col1-3">
+        <h3 ng-bind="p.name"></h3>
+
+        <span class="infoTitle">Price</span>
+        <p class="infoContent">{{p.price/100 | currency}}</p>
+
+        <span class="infoTitle">Caffeine</span>
+        <p class="infoContent">{{p.caffeineScale}}</p>
+
+        <span class="infoTitle">Ingredients</span>
+        <p class="infoContent">{{p.ingredients}}</p>
+
+        <span class="infoTitle">Rating</span>
+        <p class="infoContent">{{p.rating}}</p>
+
+        <span class="infoTitle">InStock</span>
+        <p class="infoContent" ng-class="p.inStock ? 'green' : 'red'">
+          {{p.inStock | checkmark}}
+        </p>
+
+        <span class="infoTitle">Categories</span>
+        <ul>
+          <li class="infoContent" ng-repeat="c in p.categories">{{c}}</li>
+        </ul>
+      </div>
+
+      <div  class="form-inline product-box col1-3">
+        <div ng-if="p.inStock">
+          <select class="form-control" ng-model='quantity'>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+          <button class="btn btn-info" ng-click="addToCart(quantity, p)">Add</button>
+        </div>
+      </div>
+
+    </article>
+  </section>
+</div>

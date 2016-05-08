@@ -24,14 +24,12 @@
   @include makeRow(2, 2vw);
 }
 
-
 .col1-3{
-  @include makeRow(3, 2vw);
+  @include makeRow(3, 0.5vw);
 }
 .col2-3{
-  @include makeRow(1.5, 2vw);
+  @include makeRow(1.5, 0.5vw);
 }
-
 
 .col1-4{
   @include makeRow(4, 2vw);
@@ -39,7 +37,6 @@
 .col3-4{
   @include makeRow((4/3), 2vw);
 }
-
 
 .col1-6{
   @include makeRow(6, 2vw);

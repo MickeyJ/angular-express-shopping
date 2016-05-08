@@ -1,0 +1,25 @@
+
+#top-page{
+
+  #search-bar{
+    float: right;
+    @extend %marg-sm;
+    span{
+      font-size: 1.3em;
+    }
+  }
+
+  #header{
+    float: left;
+
+    h1{
+      @extend %marg-sm;
+    }
+  }
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

@@ -1,3 +1,4 @@
 node_modules
+bower_components
 public/app.js
 public/main.css

@@ -2,12 +2,14 @@
 @import 'utils/mixin';
 @import 'utils/extends';
 
-@import 'common/base';
-@import 'common/nav';
+@import 'common/top-page';
 @import 'common/flexin';
 @import 'common/box';
 
+.green{
+  color: green;
+}
 
-h1{
-  color: DodgerBlue;
+.red{
+  color: red;
 }

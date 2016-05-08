@@ -10,12 +10,9 @@ var Router = (
         controllerAs: 'vm',
         controller: 'HomeController'
       })
-      .state('about', {
-        url: '/about',
-        scope: true,
-        template: '@@import _about.html',
-        controllerAs: 'vm',
-        controller: 'AboutController'
+      .state('cart', {
+        url: '/cart',
+        template: '@@import _cart.html'
       });
 
     $urlRouterProvider.otherwise('/');
