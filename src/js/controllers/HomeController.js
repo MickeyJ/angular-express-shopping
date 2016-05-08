@@ -29,7 +29,7 @@ var HomeController = function($interval, AppStoreFactory){
   ];
   
   vm.priceSortOptions = [
-    {value: "", name: "-- Order By Price --"},
+    {value: "", name: "-- Sort By Price --"},
     {value: "price", name: "Lowest"},
     {value: "-price", name: "Highest"}
   ];
