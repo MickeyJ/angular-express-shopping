@@ -5,7 +5,7 @@ var ProductListDirective = function(){
     scope: {
       products: '=',
       isInStock: '=',
-      searchName: '=',
+      search: '=',
       selectedCategoryOption: '=',
       selectedPriceOrder: '=',
       addToCart: '='

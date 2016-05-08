@@ -6,7 +6,7 @@
   </a>
   <input
     type="text"
-    ng-model="searchName"
+    ng-model="search.name"
     class="form-control"
     placeholder="Search By Name"
   />
@@ -14,9 +14,9 @@
   <select
     title="selectType"
     class="form-control"
-    ng-init="selectedCategoryOption = categoryOptions[0].value"
+    ng-init="selectedCategoryOption.categories = categoryOptions[0].value"
     ng-options="option.value as option.name for option in categoryOptions"
-    ng-model="selectedCategoryOption">
+    ng-model="selectedCategoryOption.categories">
   </select >
 
   <select

@@ -4,10 +4,10 @@ var SearchBarDirective = function(){
     restrict: 'E',
     scope: {
       cartQtyTotal: '=',
-      searchName: '=',
+      search: '=',
       categoryOptions: '=',
-      selectedCategoryOption: '=',
       priceSortOptions: '=',
+      selectedCategoryOption: '=',
       selectedPriceOrder: '='
     },
     template: '@@import _search-bar.html'

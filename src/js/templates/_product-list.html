@@ -1,5 +1,5 @@
 <div id="product-list-box">
-  <section  ng-repeat="p in products | filter: searchName: p.name | filter: selectedCategoryOption | orderBy: selectedPriceOrder">
+  <section  ng-repeat="p in products | filter: search | filter: selectedCategoryOption | orderBy: selectedPriceOrder">
     <article class="flex-row">
 
       <div class="product-box col1-3">

@@ -6,9 +6,9 @@
 
   <search-bar-directive
     cart-qty-total="vm.cartQtyTotal"
-    search-name="vm.searchName"
+    search="vm.search.name"
     category-options="vm.categoryOptions"
-    selected-category-option="vm.selectedCategoryOption"
+    selected-category-option="vm.selectedCategoryOption.categories"
     price-sort-options="vm.priceSortOptions"
     selected-price-order="vm.selectedPriceOrder">
   </search-bar-directive>
@@ -18,8 +18,8 @@
 <product-list-directive
   products="vm.products"
   is-in-stock="vm.isInStock"
-  search-name="vm.searchName"
-  selected-category-option="vm.selectedCategoryOption"
+  search="vm.search.name"
+  selected-category-option="vm.selectedCategoryOption.categories"
   selected-price-order="vm.selectedPriceOrder"
   add-to-cart="vm.addToCart">
 </product-list-directive>
