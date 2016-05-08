@@ -1,7 +1,8 @@
 var angular = require('angular');
 require('angular-ui-router');
 
-var checkMark = require('./filters/CheckMarkFilter');
+var CheckMarkFilter = require('./filters/CheckMarkFilter');
+var ColorTrueFilter = require('./filters/ColorTrueFilter');
 var HomeController = require('./controllers/HomeController');
 var CartListController = require('./controllers/CartListController');
 var CartListDirective = require('./directives/CartListDirective');
@@ -11,7 +12,9 @@ var AppStoreFactory = require('./factories/AppStoreFactory');
 var Router = require('./router');
 
 angular
-  .module('app', ['ui.router', 'checkMark'])
+  .module('app', ['ui.router'])
+  .filter('colortrue', ColorTrueFilter)
+  .filter('checkmark', CheckMarkFilter)
   .factory( 'AppStoreFactory', AppStoreFactory )
   .controller( 'HomeController', HomeController )
   .controller( 'CartListController', CartListController )

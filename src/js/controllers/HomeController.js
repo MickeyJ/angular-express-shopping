@@ -31,6 +31,7 @@ var HomeController = function($interval, AppStoreFactory){
   
   vm.selectedCategoryOption = vm.categoryOptions[0];
   vm.selectedPriceSort = vm.priceSortOptions[0];
+  
 };
 
 HomeController.$inject = ['$interval','AppStoreFactory'];

@@ -1,11 +1,37 @@
 
 #top-page{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  z-index: 10;
+  background: white;
 
   #search-bar{
     float: right;
     @extend %marg-sm;
     span{
       font-size: 1.3em;
+    }
+    .qty-style{
+      font-weight: 500;
+      color: black;
+    }
+
+    .total-style{
+      height: 32px;
+      line-height: 0;
+      border: 1px solid #ccc;
+      @include border-radius(5px);
+      font-weight: 300;
+      font-size: 1.3em;
+      color: DodgerBlue;
+      background: white;
+      span{
+        color: black;
+        font-size: inherit;
+      }
     }
   }
 
@@ -22,4 +48,8 @@
     display: table;
     clear: both;
   }
+
 }
+
+
+
