@@ -2,7 +2,7 @@
 
 ```bash
   
-$ npm install && npm i -g gulp nodemon
+$ npm i -g gulp nodemon && npm install $$ bower install
   
 ```
 
