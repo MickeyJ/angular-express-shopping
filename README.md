@@ -1,5 +1,7 @@
 # Angular - Gulp - SCSS - Express
 
+[__Live Demo__](https://ng-shop-app.herokuapp.com/)
+
 ```bash
   
 $ npm i -g gulp nodemon && npm install $$ bower install
