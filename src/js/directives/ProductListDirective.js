@@ -11,6 +11,6 @@ function productListDirective(){
     },
     template: '@@import _product-list.html'
   }
-};
+}
 
 module.exports = productListDirective;

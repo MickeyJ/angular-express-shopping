@@ -1,5 +1,4 @@
 
-
 function router($stateProvider, $urlRouterProvider, $locationProvider){
 
   $stateProvider
@@ -18,7 +17,6 @@ function router($stateProvider, $urlRouterProvider, $locationProvider){
   $urlRouterProvider.otherwise('/');
   $locationProvider.html5Mode(true);
 }
-
 
 router.$inject = ['$stateProvider', '$urlRouterProvider', '$locationProvider'];
 module.exports = router;
