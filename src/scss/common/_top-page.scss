@@ -10,10 +10,11 @@
 
   #header{
     float: left;
+    @extend %marg-sm;
 
     h1{
       color: White;
-      @extend %marg-sm;
+      margin: 0;
     }
   }
 
