@@ -1,5 +1,5 @@
 
-var AppStoreFactory = function(){
+function appStoreFactory(){
 
   var PRODUCTS = require('../assets/products.json');
   var CART = [{
@@ -91,6 +91,6 @@ var AppStoreFactory = function(){
       return qty
     }
   }
-};
+}
 
-module.exports = AppStoreFactory;
+module.exports = appStoreFactory;

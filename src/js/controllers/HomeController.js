@@ -1,14 +1,14 @@
 
-var HomeController = function($interval, AppStoreFactory){
+function homeController($interval, appStoreFactory){
   var vm = this;
-  
-  vm.products = AppStoreFactory.getAllProducts();
-  vm.addToCart = AppStoreFactory.addToCart;
+
+  vm.products = appStoreFactory.getAllProducts();
+  vm.addToCart = appStoreFactory.addToCart;
 
   $interval(function(){
-    vm.cartQtyTotal = AppStoreFactory.cartQty();
+    vm.cartQtyTotal = appStoreFactory.cartQty();
   }, 100);
-  
+
   vm.categoryOptions = [
     {value: "", name: "-- Categories --"},
     {value: "hot", name: "Hot"},
@@ -22,17 +22,17 @@ var HomeController = function($interval, AppStoreFactory){
     {value: "spring", name: "Spring"},
     {value: "dry", name: "Dry"}
   ];
-  
+
   vm.priceSortOptions = [
     {value: "", name: "-- Sort By Price --"},
     {value: "price", name: "Lowest"},
     {value: "-price", name: "Highest"}
   ];
-  
+
   vm.selectedCategoryOption = vm.categoryOptions[0];
   vm.selectedPriceSort = vm.priceSortOptions[0];
   
-};
+}
 
-HomeController.$inject = ['$interval','AppStoreFactory'];
-module.exports = HomeController;
+homeController.$inject = ['$interval','appStoreFactory'];
+module.exports = homeController;

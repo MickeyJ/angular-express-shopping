@@ -1,5 +1,5 @@
 
-var SearchBarDirective = function(){
+function searchBarDirective(){
   return{
     restrict: 'E',
     scope: {
@@ -12,6 +12,6 @@ var SearchBarDirective = function(){
     },
     template: '@@import _search-bar.html'
   }
-};
+}
 
-module.exports = SearchBarDirective;
+module.exports = searchBarDirective;

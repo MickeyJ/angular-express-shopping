@@ -1,12 +1,11 @@
 
-
-var CartListDirective = function(){
+function cartListDirective(){
   return{
     restrict: 'E',
     template: '@@import _cart-list.html',
     controllerAs: 'vm',
-    controller: 'CartListController'
+    controller: 'cartListController'
   }
-};
+}
 
-module.exports = CartListDirective;
+module.exports = cartListDirective;

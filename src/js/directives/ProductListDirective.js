@@ -1,5 +1,5 @@
 
-var ProductListDirective = function(){
+function productListDirective(){
   return{
     restrict: 'E',
     scope: {
@@ -13,4 +13,4 @@ var ProductListDirective = function(){
   }
 };
 
-module.exports = ProductListDirective;
+module.exports = productListDirective;

@@ -1,5 +1,5 @@
 <div id="product-list-box">
-  <section  ng-repeat="p in products | filter: search | filter: selectedCategoryOption | orderBy: selectedPriceSort">
+  <section ng-repeat="p in products | filter: search | filter: selectedCategoryOption | orderBy: selectedPriceSort">
     <article class="flex-row">
 
       <div class="product-box col1-3">
@@ -32,7 +32,8 @@
         </ul>
       </div>
 
-      <div  class="form-inline product-box col1-3">
+      <div class="form-inline product-box col1-3">
+
         <div ng-if="p.inStock">
           <label for="quantity" > Qty:
             <select id="quantity" class="form-control" ng-model='quantity'>
@@ -50,7 +51,8 @@
           </label >
           <button class="btn btn-info" ng-click="addToCart(quantity, p)">Add</button>
         </div>
-        <span ng-if="!p.inStock" style="color: maroon">Out Of Stock</span>
+
+        <span ng-if="!p.inStock" style="color: FireBrick">Out Of Stock</span>
       </div>
 
     </article>

@@ -29,5 +29,23 @@
     }
   }
 
+}
 
+.img-td{
+  width: 20%;
+  margin: 0 auto;
+  text-align: center;
+
+  img{
+    width: 70%
+  }
+}
+
+.sub-total-td{
+  width: 10%;
+
+  p{
+    font-weight: 400;
+    font-size: 1.1em;
+  }
 }

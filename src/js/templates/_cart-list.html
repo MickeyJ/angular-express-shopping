@@ -22,6 +22,7 @@
     <thead>
     <tr>
       <th>Product</th>
+      <th>Info</th>
       <th>Sub-Total</th>
       <th>Quantity</th>
     </tr>
@@ -30,12 +31,20 @@
     <tbody>
       <tr ng-repeat="x in vm.cart track by $index">
 
-        <td>
-          <h3 ng-bind="x.item.name"></h3>
-          <img class="img-rounded" style="width: 30%" ng-src="{{x.item.imageUrl}}" alt="p.name" />
+        <td class="img-td">
+          <h4 ng-bind="x.item.name"></h4>
+          <img class="img-rounded" ng-src="{{x.item.imageUrl}}" alt="p.name" />
         </td>
 
-        <td>
+        <td class="product-box">
+          <span class="infoTitle">Caffeine</span>
+          <p class="infoContent">{{x.item.caffeineScale}}</p>
+
+          <span class="infoTitle">Ingredients</span>
+          <p class="infoContent">{{x.item.ingredients}}</p>
+        </td>
+
+        <td class="sub-total-td">
           <p class="infoContent">{{(x.item.price * x.qty)/100 | currency}}</p>
         </td>
 

@@ -1,17 +1,18 @@
-var CartListController = function($interval, AppStoreFactory){
+
+function cartListController($interval, appStoreFactory){
   var vm = this;
 
-  vm.cart = AppStoreFactory.getCart();
-  vm.addToCart = AppStoreFactory.addToCart;
-  vm.removeFromCart = AppStoreFactory.removeFromCart;
-  vm.increaseQty = AppStoreFactory.increaseQty;
-  vm.decreaseQty = AppStoreFactory.decreaseQty;
-
+  vm.cart = appStoreFactory.getCart();
+  vm.addToCart = appStoreFactory.addToCart;
+  vm.removeFromCart = appStoreFactory.removeFromCart;
+  vm.increaseQty = appStoreFactory.increaseQty;
+  vm.decreaseQty = appStoreFactory.decreaseQty;
+  
   $interval(function(){
-    vm.total = AppStoreFactory.cartTotal();
+    vm.total = appStoreFactory.cartTotal();
   }, 100);
   
-};
+}
 
-CartListController.$inject = ['$interval', 'AppStoreFactory'];
-module.exports = CartListController;
+cartListController.$inject = ['$interval', 'appStoreFactory'];
+module.exports = cartListController;
