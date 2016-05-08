@@ -4,20 +4,28 @@
 
 ```bash
   
-$ npm i -g gulp nodemon && npm install $$ bower install
+$ npm install $$ bower install
   
 ```
 
-now run Gulp
+######now run Gulp
 ```bash
   
-$ gulp
+$ npm run gulp
   
 ```
 
-and in a second terminal run Nodemon. check out [port 3000](http://localhost:3000/)
+######and in a second terminal run Nodemon. 
+__check out [port 3000](http://localhost:3000/)__
 ```bash
   
-$ nodemon
+$ npm run serve
+  
+```
+
+######to minify angular bundle
+```bash
+  
+$ npm run build
   
 ```
