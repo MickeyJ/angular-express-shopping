@@ -1,4 +1,4 @@
 node_modules
-public/bower_components
-public/bundle.js
-public/style.css
+#public/bower_components
+#public/bundle.js
+#public/style.css
