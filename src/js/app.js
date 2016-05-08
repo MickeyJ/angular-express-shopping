@@ -3,11 +3,11 @@ var angular = require('angular'),
 
 var checkMarkFilter = require('./filters/checkMarkFilter'),
     colorTrueFilter = require('./filters/colorTrueFilter'),
+    searchBarDirective = require('./directives/searchBarDirective'),
+    cartListDirective = require('./directives/cartListDirective'),
+    productListDirective = require('./directives/productListDirective'),
     homeController = require('./controllers/homeController'),
     cartListController = require('./controllers/cartListController'),
-    cartListDirective = require('./directives/cartListDirective'),
-    searchBarDirective = require('./directives/searchBarDirective'),
-    productListDirective = require('./directives/productListDirective'),
     appStoreFactory = require('./factories/appStoreFactory'),
     router = require('./router');
 
@@ -16,9 +16,9 @@ angular
   .filter('colortrue', colorTrueFilter)
   .filter('checkmark', checkMarkFilter)
   .factory('appStoreFactory', appStoreFactory)
+  .directive('searchBarDirective', searchBarDirective)
+  .directive('cartListDirective', cartListDirective)
+  .directive('productListDirective', productListDirective)
   .controller('homeController', homeController)
   .controller('cartListController', cartListController)
-  .directive('cartListDirective', cartListDirective)
-  .directive('searchBarDirective', searchBarDirective)
-  .directive('productListDirective', productListDirective)
   .config( router );
