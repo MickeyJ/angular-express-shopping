@@ -1,4 +1,4 @@
-# Angular - Gulp - SCSS - Express
+# Angular Shopping App
 
 [__Live Demo__](https://ng-shop-app.herokuapp.com/)
 

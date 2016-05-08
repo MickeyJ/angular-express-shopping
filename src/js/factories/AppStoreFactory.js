@@ -1,5 +1,6 @@
 
 var AppStoreFactory = function(){
+
   var PRODUCTS = require('../assets/products.json');
 
   var CART = [{
@@ -49,7 +50,6 @@ var AppStoreFactory = function(){
       }
     });
   };
-  
   
   return{
     getAllProducts: function(){

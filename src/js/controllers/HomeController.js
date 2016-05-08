@@ -3,16 +3,11 @@ var HomeController = function($interval, AppStoreFactory){
   var vm = this;
   
   vm.products = AppStoreFactory.getAllProducts();
+  vm.addToCart = AppStoreFactory.addToCart;
 
   $interval(function(){
     vm.cartQtyTotal = AppStoreFactory.cartQty();
   }, 100);
-  
-  vm.addToCart = AppStoreFactory.addToCart;
-  
-  vm.isInStock = function(bool){
-    return bool ? 'green' : 'red'
-  };
   
   vm.categoryOptions = [
     {value: "", name: "-- Categories --"},
@@ -36,7 +31,6 @@ var HomeController = function($interval, AppStoreFactory){
   
   vm.selectedCategoryOption = vm.categoryOptions[0];
   vm.selectedPriceSort = vm.priceSortOptions[0];
-  
 };
 
 HomeController.$inject = ['$interval','AppStoreFactory'];
