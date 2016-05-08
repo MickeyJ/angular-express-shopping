@@ -7,7 +7,7 @@ var ProductListDirective = function(){
       isInStock: '=',
       search: '=',
       selectedCategoryOption: '=',
-      selectedPriceOrder: '=',
+      selectedPriceSort: '=',
       addToCart: '='
     },
     template: '@@import _product-list.html'

@@ -8,7 +8,7 @@ var SearchBarDirective = function(){
       categoryOptions: '=',
       priceSortOptions: '=',
       selectedCategoryOption: '=',
-      selectedPriceOrder: '='
+      selectedPriceSort: '='
     },
     template: '@@import _search-bar.html'
   }

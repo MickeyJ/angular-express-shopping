@@ -35,7 +35,7 @@ var HomeController = function($interval, AppStoreFactory){
   ];
   
   vm.selectedCategoryOption = vm.categoryOptions[0];
-  vm.selectedPriceOrder = vm.priceSortOptions[0];
+  vm.selectedPriceSort = vm.priceSortOptions[0];
   
 };
 
